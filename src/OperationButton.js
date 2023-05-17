@@ -1,12 +1,13 @@
-import { ACTIONS } from "./App";
+import { ACTIONS } from "./App"
 
-export default function OperationButton({ operation, dispatch }) {
+export default function OperationButton({ dispatch, operation }) {
   return (
     <button
-      data-number
-      onClick={() => dispatch({ type: ACTIONS.CHOOSE_OPERATION, payload: operation })}
+      onClick={() =>
+        dispatch({ type: ACTIONS.CHOOSE_OPERATION, payload: { operation } })
+      }
     >
       {operation}
     </button>
-  );
+  )
 }
